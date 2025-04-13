@@ -1,5 +1,5 @@
 import React from "react";
-import photo1 from "../assets/my_photo2.jpg";
+import photo1 from "../assets/my_photo2.png";
 import { FaLinkedin, FaXTwitter, FaSquareInstagram, FaSquareGithub } from "react-icons/fa6";
 
 const About = () => {
@@ -9,9 +9,7 @@ const About = () => {
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 underline">
                     About Me
                 </h2>
-                <p className="mb-12 text-gray-400 text-center">
-                   This is all about me
-                </p>
+               <br />
             </div>
 
             {/* Left - Image */}
