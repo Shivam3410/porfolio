@@ -9,7 +9,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="scroll-mt-32 text-white pt-32 pb-24 px-6 font-[Poppins] bg-[#0f172a] min-h-screen"
+      className="scroll-mt-32 text-white pt-32 pb-24 px-6 font-[Poppins] bg-[#0f172a]"
     >
       <h2 className="text-center text-4xl sm:text-5xl font-bold mb-12">
         My <span className="text-purple-500">Skills</span>
