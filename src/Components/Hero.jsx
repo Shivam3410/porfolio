@@ -35,7 +35,7 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, [charIndex, isForward, textIndex]);
   return (
-    <div className='text-white py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#1f1f47] to-[#121212] min-h-screen flex flex-col items-center justify-center text-center'>
+    <div  id="home" className='text-white py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#1f1f47] to-[#121212] min-h-screen flex flex-col items-center justify-center text-center'>
       {/* Profile Image */}
       <img
         className='mx-auto w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-cover rounded-full shadow-lg border-4 border-purple-500'
@@ -57,14 +57,17 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className='flex justify-center gap-4 pt-6 flex-wrap'>
-        <Link to="contact" smooth={true} duration={500} offset={-70}>
-  <button className='bg-purple-600 hover:bg-purple-500 px-6 py-2 rounded-full font-semibold shadow-md transition-all duration-200'>
-    Hire Me
-  </button>
-</Link>
+          <Link to="contact" smooth={true} duration={500} offset={-70}>
+
+            <button className='bg-purple-600 hover:bg-purple-500 px-6 py-2 rounded-full font-semibold shadow-md transition-all duration-200'>
+              Hire Me
+            </button>
+          </Link>
+          <Link to="about" smooth={true} duration={500} offset={-70}>
           <button className='border border-purple-600 hover:bg-purple-600 px-6 py-2 rounded-full font-semibold shadow-md transition-all duration-200'>
             My Story
           </button>
+          </Link>
         </div>
         <div className="flex justify-center md:justify-start space-x-6 pt-6 text-3xl text-white">
           <a

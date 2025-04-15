@@ -28,9 +28,11 @@ const Navbar = () => {
 
 
     const items = [
+        { id: 4, text: "Home", to: "home" },
         { id: 1, text: "About", to: "about" },
         { id: 3, text: "Skills", to: "skills" },
         { id: 4, text: "Contact", to: "contact" },
+        
     ]
     const [menu, setMenu] = useState(false)
     return (
