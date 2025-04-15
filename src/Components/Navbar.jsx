@@ -41,7 +41,8 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: -40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, type: "spring" }}
-                className='top-0 fixed left-0 w-full z-50 container mx-auto hidden md:flex justify-between items-center py-5 bg-[#0f172a] '>
+                className='fixed top-0 left-0 w-full z-50 bg-[#0f172a]'> 
+                <div className='container mx-auto hidden md:flex justify-between items-center py-5'>
                 {/* this is showing my name  */}
                 <div className='text-xl lg:text-2xl font-bold flex items-center gap-1'>
                     <span className='text-white'>SHIVAM</span>
@@ -60,6 +61,7 @@ const Navbar = () => {
                         <a href='https://drive.google.com/file/d/1c9y2Hl2y4ulUl5pkmWIS8M2Hr2QL5rOC/view?usp=drive_link' className='md:text-base lg:text-lg bg-purple-500 hover:bg-purple-400 text-white px-4 py-2 rounded-full'>Download CV</a>
 
                     </ul>
+                </div>
                 </div>
 
             </motion.div>
