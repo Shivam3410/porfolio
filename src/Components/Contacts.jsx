@@ -115,9 +115,9 @@ const Contact = () => {
                 </div>
             </div>
             <div className='mt-48 flex justify-between items-center p-5 text-white border-t-2 border-purple-500'>
-                <p>2025 All Right Reserved</p>
-                <p>Shivam Kumar</p>
-                <div className='flex justify-center space-x-4 text-white'>
+                <p className='hidden md:flex justify-between items-center'>2025 All Right Reserved</p>
+                <p className='hidden md:flex justify-between items-center'>Shivam Kumar</p>
+                <div className='flex space-x-4'>
                     <a href="https://www.linkedin.com/in/shad%C3%B8w-sh%C3%AEv%C3%A1m-01a9602a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className='hover:text-purple-500'> <FaLinkedin className='w-6 h-6' /></a>
                     <a href="https://github.com/Shivam3410" className='hover:text-purple-500'><FaSquareGithub className='w-6 h-6' /></a>
                     <a href="https://www.instagram.com/shadow_shivam?utm_source=qr&igsh=eTl3YnY4cnY1ajF3" className='hover:text-purple-500'><FaSquareInstagram className='w-6 h-6' /></a>
