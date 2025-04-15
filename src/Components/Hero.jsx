@@ -1,9 +1,39 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import photo from '../assets/my_photo.jpg'
 import { Link } from 'react-scroll';
 import { FaLinkedin, FaXTwitter, FaSquareInstagram, FaSquareGithub } from "react-icons/fa6";
 
 const Hero = () => {
+  const texts = ["Shivam", "Programmer"];
+  const [displayText, setDisplayText] = useState("");
+  const [charIndex, setCharIndex] = useState(0);
+  const [isForward, setIsForward] = useState(true);
+  const [textIndex, setTextIndex] = useState(0);
+
+  useEffect(() => {
+    const currentText = texts[textIndex];
+    const interval = setInterval(() => {
+      setDisplayText(currentText.substring(0, charIndex));
+
+      if (isForward) {
+        if (charIndex < currentText.length) {
+          setCharIndex((prev) => prev + 1);
+        } else {
+          setTimeout(() => setIsForward(false), 1000);
+          clearInterval(interval);
+        }
+      } else {
+        if (charIndex > 0) {
+          setCharIndex((prev) => prev - 1);
+        } else {
+          setIsForward(true);
+          setTextIndex((prev) => (prev + 1) % texts.length);
+        }
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [charIndex, isForward, textIndex]);
   return (
     <div className='text-white py-16 px-6 md:px-12 lg:px-20 bg-gradient-to-b from-[#1f1f47] to-[#121212] min-h-screen flex flex-col items-center justify-center text-center'>
       {/* Profile Image */}
@@ -16,7 +46,7 @@ const Hero = () => {
       {/* Hero Content */}
       <div className='mt-8 space-y-4'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight'>
-          Hey, I'm <span className='text-purple-500'>Shivam</span>
+          Hey, I'm <span className='text-purple-500'>{displayText}</span>
         </h1>
         <span className='font-extrabold block text-4xl md:text-5xl text-purple-500'>
           Frontend Developer & BCA Student
