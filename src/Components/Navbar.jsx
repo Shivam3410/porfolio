@@ -41,7 +41,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: -40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, type: "spring" }}
-                className='container mx-auto hidden md:flex justify-between items-center py-6 '>
+                className='top-0 fixed left-0 w-full z-50 container mx-auto hidden md:flex justify-between items-center py-5 bg-[#0f172a] '>
                 {/* this is showing my name  */}
                 <div className='text-xl lg:text-2xl font-bold flex items-center gap-1'>
                     <span className='text-white'>SHIVAM</span>
